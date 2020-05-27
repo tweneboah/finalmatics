@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Particles from 'react-particles-js';
+import Navigation from './navigation/Navigation';
+import Top from './top/Top'
+
+import'tachyons';
+
+const particlesoptions={
+  particles: {
+    number:{
+      value:900,
+    density:{
+      enable:true,
+      value_area:300
+    }       
+}
+}
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Particles className="particles" part={particlesoptions}/>
+      <Navigation/> 
+      <Top />  
     </div>
   );
 }
